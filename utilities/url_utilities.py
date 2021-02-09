@@ -1,6 +1,11 @@
 def load_urls_from_file(file_path: str):
-    # TODO: add the code needed tp read the text file with the urls in it
-    pass
+    try:
+        with open(file_path) as f:
+            content = f.readline()
+            return content
+    except:
+        print("the file " + file_path + " could not be found");
+        exit(2)
 
 
 def load_page(url: str):
